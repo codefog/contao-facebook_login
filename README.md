@@ -5,6 +5,7 @@ Allow the users to log in with their Facebook accounts. Please note that you nee
 
 ### Contao compatibility
 - Contao 3.1
+- Contao 3.2
 
 ### Available languages
 - English
