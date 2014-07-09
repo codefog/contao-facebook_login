@@ -23,7 +23,7 @@ require_once "base_facebook.php";
  * Extends the BaseFacebook class with the intent of using
  * PHP sessions to store user ids and access tokens.
  */
-class FacebookSDK extends BaseFacebook
+class Facebook extends BaseFacebook
 {
   const FBSS_COOKIE_NAME = 'fbss';
 
@@ -53,6 +53,16 @@ class FacebookSDK extends BaseFacebook
     parent::__construct($config);
     if (!empty($config['sharedSession'])) {
       $this->initSharedSession();
+
+      // re-load the persisted state, since parent
+      // attempted to read out of non-shared cookie
+      $state = $this->getPersistentData('state');
+      if (!empty($state)) {
+        $this->state = $state;
+      } else {
+        $this->state = null;
+      }
+
     }
   }
 
@@ -129,7 +139,9 @@ class FacebookSDK extends BaseFacebook
     }
 
     $session_var_name = $this->constructSessionVariableName($key);
-    unset($_SESSION[$session_var_name]);
+    if (isset($_SESSION[$session_var_name])) {
+      unset($_SESSION[$session_var_name]);
+    }
   }
 
   protected function clearAllPersistentData() {

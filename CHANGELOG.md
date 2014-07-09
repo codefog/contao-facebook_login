@@ -1,6 +1,16 @@
 facebook_login Changelog
 ========================
 
+Version 1.0.2 stable (2014-07-??)
+---------------------------------
+
+### Fixed
+- Fixed the Facebook JS connect
+
+### Improved
+- Updated the Facebook SDK to the latest version
+
+
 Version 1.0.1 stable (2013-11-30)
 ---------------------------------
 

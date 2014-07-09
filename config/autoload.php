@@ -33,7 +33,7 @@ ClassLoader::addClasses(array
 	// Library
 	'FacebookLogin\FacebookApiException' => 'system/modules/facebook_login/library/Facebook/base_facebook.php',
 	'FacebookLogin\BaseFacebook'         => 'system/modules/facebook_login/library/Facebook/base_facebook.php',
-	'FacebookLogin\FacebookSDK'          => 'system/modules/facebook_login/library/Facebook/facebook.php',
+	'FacebookLogin\Facebook'             => 'system/modules/facebook_login/library/Facebook/facebook.php',
 ));
 
 
