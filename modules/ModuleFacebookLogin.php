@@ -99,10 +99,10 @@ class ModuleFacebookLogin extends \Module
 	 */
 	protected function loginWithFacebook()
 	{
-		$objFacebook = new FacebookSDK(array
+		$objFacebook = new Facebook(array
 		(
 			'appId' => $this->fblogin_appId,
-			'secret' => $this->fblogin_appKey
+			'secret' => $this->fblogin_appKey,
 		));
 
 		$arrProfile = false;
