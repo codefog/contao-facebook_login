@@ -1,7 +1,7 @@
 facebook_login Changelog
 ========================
 
-Version 1.0.2 stable (2014-07-??)
+Version 1.0.2 stable (2014-12-18)
 ---------------------------------
 
 ### Fixed
