@@ -10,6 +10,7 @@ Version 1.0.2 stable (2014-07-??)
 ### Improved
 - Updated the Facebook SDK to the latest version
 - Added the composer.json file
+- Updated the readme file
 
 
 Version 1.0.1 stable (2013-11-30)
