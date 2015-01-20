@@ -16,7 +16,7 @@
  * Extension version
  */
 @define('FACEBOOK_LOGIN_VERSION', '1.0');
-@define('FACEBOOK_LOGIN_BUILD', '2');
+@define('FACEBOOK_LOGIN_BUILD', '3');
 
 
 /**
