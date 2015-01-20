@@ -8,18 +8,12 @@
  * @package facebook_login
  * @author  Codefog <http://codefog.pl>
  * @author  Kamil Kuzminski <kamil.kuzminski@codefog.pl>
+ * @author  Didier Federer <d.federer@designpilot.ch>
  * @license LGPL
  */
 
 
 /**
- * Extension version
+ * Fields
  */
-@define('FACEBOOK_LOGIN_VERSION', '1.0');
-@define('FACEBOOK_LOGIN_BUILD', '3');
-
-
-/**
- * Front end modules
- */
-$GLOBALS['FE_MOD']['user']['facebook_login'] = 'ModuleFacebookLogin';
+$GLOBALS['TL_LANG']['tl_member']['fblogin'] = array('Facebook Benutzer ID', 'Hier können Sie ihre Facebook Benutzer ID eintragen damit die Anmeldung mit dem Facebook Konto funktioniert.');
