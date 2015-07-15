@@ -111,7 +111,7 @@ class ModuleFacebookLogin extends \Module
 		{
 			try
 			{
-				$arrProfile = $objFacebook->api('/me');
+				$arrProfile = $objFacebook->api('/me?fields=id,name,first_name,last_name,email,gender');
 			}
 			catch (FacebookApiException $e)
 			{

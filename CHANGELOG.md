@@ -1,6 +1,13 @@
 facebook_login Changelog
 ========================
 
+Version 1.0.4 stable (2015-??-??)
+---------------------------------
+
+### Fixed
+- The personal data was not fetched from Facebook (see #1)
+
+
 Version 1.0.3 stable (2015-01-20)
 ---------------------------------
 
