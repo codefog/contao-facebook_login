@@ -1,6 +1,16 @@
 facebook_login Changelog
 ========================
 
+Version 1.0.4 stable (2015-07-16)
+---------------------------------
+
+### Fixed
+- The personal data was not fetched from Facebook (see #1)
+
+### Improved
+- Added the .gitignore file
+
+
 Version 1.0.3 stable (2015-01-20)
 ---------------------------------
 
