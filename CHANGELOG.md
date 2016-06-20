@@ -1,6 +1,13 @@
 facebook_login Changelog
 ========================
 
+Version 1.0.5 stable (2016-06-20)
+---------------------------------
+
+### Fixed
+- The home directory was not assigned upon user creation (#3)
+
+
 Version 1.0.4 stable (2015-07-16)
 ---------------------------------
 
