@@ -258,6 +258,34 @@ class ModuleFacebookLogin extends \Module
 		$objNewUser->setRow($arrData);
 		$objNewUser->save();
 
+		// Assign home directory
+		if ($this->reg_assignDir)
+		{
+			$objHomeDir = \FilesModel::findByUuid($this->reg_homeDir);
+
+			if ($objHomeDir !== null)
+			{
+				$this->import('Files');
+				$strUserDir = standardize($arrData['username']) ?: 'user_' . $objNewUser->id;
+
+				// Add the user ID if the directory exists
+				while (is_dir(TL_ROOT . '/' . $objHomeDir->path . '/' . $strUserDir))
+				{
+					$strUserDir .= '_' . $objNewUser->id;
+				}
+
+				// Create the user folder
+				new \Folder($objHomeDir->path . '/' . $strUserDir);
+
+				$objUserDir = \FilesModel::findByPath($objHomeDir->path . '/' . $strUserDir);
+
+				// Save the folder ID
+				$objNewUser->assignDir = 1;
+				$objNewUser->homeDir = $objUserDir->uuid;
+				$objNewUser->save();
+			}
+		}
+
 		$insertId = $objNewUser->id;
 
 		// HOOK: send insert ID and user data
