@@ -25,11 +25,15 @@
 				if (response.status === 'connected') {
 					window.location = url;
 				} else {
-					FB.login(function(response) {
-						if (response.status === 'connected') {
-							window.location = url;
-						}
-					}, {scope: 'email'});
+					if (navigator.userAgent.match('CriOS')) {
+						window.location = 'https://www.facebook.com/dialog/oauth?client_id=<?php echo $this->appId; ?>&redirect_uri='+encodeURIComponent(url)+'&scope=email&response_type=token';
+					} else {
+						FB.login(function (response) {
+							if (response.status === 'connected') {
+								window.location = url;
+							}
+						}, {scope: 'email'});
+					}
 				}
 			});
 		});
