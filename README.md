@@ -1,5 +1,6 @@
 # Facebook Login extension for Contao Open Source CMS
 
+![](https://img.shields.io/maintenance/no/2017.svg)
 ![](https://img.shields.io/packagist/v/codefog/contao-facebook_login.svg)
 ![](https://img.shields.io/packagist/l/codefog/contao-facebook_login.svg)
 ![](https://img.shields.io/packagist/dt/codefog/contao-facebook_login.svg)
@@ -10,6 +11,10 @@ Allow the users to log in with their Facebook accounts. Please note that you nee
 this extension work!
 
 ![](docs/images/preview.png)
+
+## Contao 4 compatibility
+
+Please use the [inspiredminds/contao-facebook-login](https://github.com/inspiredminds/contao-facebook-login) bundle for Contao 4.
 
 ## Documentation
 
